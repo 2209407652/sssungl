@@ -6,7 +6,7 @@ hero:
   text: SSSUNGL'S LIFE RECORD BLOG
   tagline: 林深时见鹿，溪午不闻钟。
   image:
-    src: http://sssungl.xyz/logo.png
+    src: /logo.png
     alt: VitePress
   actions:
     - theme: brand

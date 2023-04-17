@@ -76,7 +76,7 @@ export default defineConfig({
    * 应用配置
    */
   head: [
-    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "icon", href: "./favicon.ico" }],
     ["link", { rel: "stylesheet", href: "/vars.css" }],
     ["script", { src: "https://cdn.tailwindcss.com" }],
   ],

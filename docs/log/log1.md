@@ -33,6 +33,70 @@ head:
 
 <!-- https://aplayer.js.org/#/zh-Hans/?id=%E6%AD%8C%E8%AF%8D%E6%A0%BC%E5%BC%8F -->
 
+## 2023/4/17
+
+**Deploy for Github Pages**
+
+1. 修改`docs/.vitepress/config.ts`
+
+```ts
+ base: "/sssungl/", //这里为仓库名字，前后始终加'/'
+```
+
+2. 添加`.github/workflows/deploy.yml`文件
+
+```yml
+name: Deploy
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: npm
+      - run: npm ci
+      - name: Build
+        run: npm run docs:build
+      - uses: actions/configure-pages@v2
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: docs/.vitepress/dist
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v1
+```
+
+:::tip
+请替换相应的分支名称。比如你要构建的分支是`master`，那么你应该在上面的文件中替换`main`为`master`
+:::
+
+3. 修改仓库`Github Actions`权限
+
+![修改](http://image.sssungl.xyz/vitepress/202304171503343.png)
+
+4. 提交代码到`main`分支。`git push -u origin main`
+
+5. 等待
+
+6. 添加站点
+
+![站点](http://image.sssungl.xyz/vitepress/202304171506477.png)
+
 ## V0.0.3
 
 集成 axios。
@@ -95,21 +159,9 @@ declare module "axios" {
     get<T = any>(url: string, config?: AxiosRequestConfig): Promise<T>;
     delete<T = any>(url: string, config?: AxiosRequestConfig): Promise<T>;
     head<T = any>(url: string, config?: AxiosRequestConfig): Promise<T>;
-    post<T = any>(
-      url: string,
-      data?: any,
-      config?: AxiosRequestConfig
-    ): Promise<T>;
-    put<T = any>(
-      url: string,
-      data?: any,
-      config?: AxiosRequestConfig
-    ): Promise<T>;
-    patch<T = any>(
-      url: string,
-      data?: any,
-      config?: AxiosRequestConfig
-    ): Promise<T>;
+    post<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>;
+    put<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>;
+    patch<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>;
   }
 }
 ```
