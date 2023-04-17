@@ -93,7 +93,7 @@ jobs:
 
 5. 等待
 
-6. 添加站点
+6. 添加站点, 单机`Visit site`即可查看站点，每次推送都会自动部署站点
 
 ![站点](http://image.sssungl.xyz/vitepress/202304171506477.png)
 
