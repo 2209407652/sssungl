@@ -24,6 +24,10 @@ export default defineConfig({
             text: "Tool",
             link: "/pages/Tool/twcIndex",
           },
+          {
+            text: "canvas",
+            link: "/pages/canvas/index1",
+          },
         ],
       },
     ],
