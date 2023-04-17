@@ -1,0 +1,12 @@
+/* 自定义 */
+:root {
+  /* 英雄联盟卡片 */
+  --hero-card-background: #061c25;
+  --hero-card-background-hover: #006680;
+  --hero-card-text-light: var(--vp-c-white-soft);
+}
+
+.dark {
+  --hero-card-background: #808181;
+  --hero-card-background-hover: #66a8c4;
+}
