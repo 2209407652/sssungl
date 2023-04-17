@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
+  base: "/sssungl/",
   /**
    * 主题配置
    */
@@ -31,7 +32,7 @@ export default defineConfig({
       "/log/": [
         {
           text: "博客搭建",
-          collapsible: true,
+          collapsed: true,
           items: [{ text: "V0", link: "/log/log1" }],
         },
       ],
@@ -39,7 +40,7 @@ export default defineConfig({
         // 工具库
         {
           text: "TailwindCSS",
-          collapsible: true,
+          collapsed: true,
           items: [
             { text: "介绍", link: "/pages/Tool/twcIndex" },
             { text: "卡片", link: "/pages/Tool/twcCard" },
@@ -47,7 +48,7 @@ export default defineConfig({
         },
         {
           text: "GSAP",
-          collapsible: true,
+          collapsed: true,
           items: [
             { text: "快速入门", link: "/pages/Tool/gsapIndex" },
             { text: "使用", link: "/pages/Tool/gsapUse" },
