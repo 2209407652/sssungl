@@ -34,7 +34,7 @@ onMounted(() => {
   <div class="home">
     <img class="sss-avatar" src="/logo.png" />
     <p class="s1" style="margin: 8px">
-      👋Hi,我叫孙光龙，目前是一名大四的学生(还有一个月)。
+      👋Hi,我叫孙光龙，目前是一名大四的学生。
     </p>
     <p class="s2" style="margin: 8px">
       💦想给自己起一个网名，但是没有什么想法。╰（‵□′）╯
@@ -48,7 +48,7 @@ onMounted(() => {
     <p class="s5" style="margin: 8px">
       ⚙️后边还是学习前端技术为主，其余时间学习英语、剪辑、等(＠_＠;)(理想很丰满，显示很骨感)
     </p>
-
+    <p class="s6" style="margin: 8px;">ip: 43.138.26.104, 开放端口: 3030, 8000, 3010, 4000</p>
     <button class="b1" @click="goBack">返回首页</button>
   </div>
 </template>
