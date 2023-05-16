@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,O as t}from"./chunks/framework.dda4b555.js";const A=JSON.parse('{"title":"GSAP","description":"","frontmatter":{"title":"GSAP"},"headers":[],"relativePath":"pages/Tool/gsapIndex.md"}'),l={name:"pages/Tool/gsapIndex.md"},o=t("",15),e=[o];function p(r,c,i,y,D,F){return a(),n("div",null,e)}const d=s(l,[["render",p]]);export{A as __pageData,d as default};
