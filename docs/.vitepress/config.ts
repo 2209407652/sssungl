@@ -26,7 +26,7 @@ export default defineConfig({
           },
           {
             text: "canvas",
-            link: "/pages/canvas/index1",
+            link: "/pages/canvas/canvas _1",
           },
         ],
       },
@@ -56,6 +56,18 @@ export default defineConfig({
           items: [
             { text: "快速入门", link: "/pages/Tool/gsapIndex" },
             { text: "使用", link: "/pages/Tool/gsapUse" },
+          ],
+        },
+      ],
+      "/pages/canvas/": [
+        {
+          text: "canvas 2d",
+          collapsed: true,
+          items: [
+            {
+              text: "canvas基础",
+              link: "/pages/canvas/canvas _1",
+            },
           ],
         },
       ],
