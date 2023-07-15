@@ -152,10 +152,12 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 ## 线型 Line Styles
 
-1. `lineWidth = value` 设置线条宽度
-2. `lineCap = type` 设置线条末端样式
-3. `lineJoin = type` 设置线条之间结合处的样式
+1. `lineWidth = value` 设置线条宽度 - `1 2 3`
+2. `lineCap = type` 设置线条末端样式 - `butt round square 默认butt`
+3. `lineJoin = type` 设置线条之间结合处的样式 - `round bevel miter 默认miter`
 4. `miterLimit = value` 限制当两条线相交时交接处最大长度；所谓交接处长度（斜接长度）是指线条交接处内角顶点到外角顶点的长度。
 5. `getLineDash()` 返回一个包含当前虚线样式，长度为非负偶数的数组。
 6. `setLineDash(segments)` 设置当前虚线样式
 7. `lineDashOffset = value` 设置虚线样式的起始偏移量
+
+## 渐变 Gradients

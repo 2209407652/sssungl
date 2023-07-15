@@ -15,18 +15,23 @@ export default defineConfig({
       // },
       {
         text: "我的笔记",
+        link: "/log/log1",
+      },
+      {
+        text: "前端",
         items: [
           {
-            text: "博客日记",
-            link: "/log/log1",
-          },
-          {
-            text: "Tool",
+            text: "工具库",
             link: "/pages/Tool/twcIndex",
           },
+        ],
+      },
+      {
+        text: "服务端",
+        items: [
           {
-            text: "canvas",
-            link: "/pages/canvas/canvas _1",
+            text: "NestJS",
+            link: "/pages/nestjs/index1",
           },
         ],
       },
@@ -48,6 +53,7 @@ export default defineConfig({
           items: [
             { text: "介绍", link: "/pages/Tool/twcIndex" },
             { text: "卡片", link: "/pages/Tool/twcCard" },
+            { text: "尝试", link: "/pages/Tool/tailwind" },
           ],
         },
         {
@@ -59,16 +65,12 @@ export default defineConfig({
           ],
         },
       ],
-      "/pages/canvas/": [
+      "/pages/nestjs/": [
+        // 服务器端
         {
-          text: "canvas 2d",
+          text: "NestJS基础",
           collapsed: true,
-          items: [
-            {
-              text: "canvas基础",
-              link: "/pages/canvas/canvas _1",
-            },
-          ],
+          items: [{ text: "初学", link: "/pages/nestjs/index1" }],
         },
       ],
     },

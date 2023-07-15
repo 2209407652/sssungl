@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+<script>
+    const canvas = document.getElementById("canvas")
+    const ctx = canvas.getContext('2d')
+    function draw() {
+
+        // Create gradients
+        var lingrad = ctx.createLinearGradient(0, 0, 0, 150);
+        lingrad.addColorStop(0, 'blue');
+        lingrad.addColorStop(0.5, '#fff');
+        lingrad.addColorStop(0.5, 'green');
+        lingrad.addColorStop(1, '#fff');
+
+        var lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
+        lingrad2.addColorStop(0.5, 'green');
+        lingrad2.addColorStop(1, 'blue');
+
+        var lineargradient = ctx.createLinearGradient(0, 60, 0, 80);
+        lineargradient.addColorStop(0, 'red');
+        lineargradient.addColorStop(1, 'pink');
+
+
+        // assign gradients to fill and stroke styles
+        ctx.fillStyle = lingrad;
+        ctx.strokeStyle = lingrad2;
+
+        // draw shapes
+        ctx.fillRect(10, 10, 130, 130);
+        ctx.strokeRect(50, 50, 50, 50);
+
+    }
+    draw()
+
+</script>
+
+</html>
