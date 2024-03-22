@@ -1,0 +1,1 @@
+import{_ as t,o,c as l,O as n}from"./chunks/framework.dda4b555.js";const h=JSON.parse('{"title":"Python数据类型","description":"","frontmatter":{"title":"Python数据类型"},"headers":[],"relativePath":"pages/python/data.md"}'),s={name:"pages/python/data.md"},r=n("",2),i=[r];function e(a,g,p,_,c,u){return o(),l("div",null,i)}const f=t(s,[["render",e]]);export{h as __pageData,f as default};
