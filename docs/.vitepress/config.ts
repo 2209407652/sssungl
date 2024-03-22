@@ -1,105 +1,119 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
-  base: "/sssungl/",
-  /**
-   * 主题配置
-   */
-  themeConfig: {
-    // 导航栏配置
-    nav: [
-      { text: "首页", link: "/" },
-      // {
-      //   text: "英雄联盟",
-      //   link: "/pages/heros/",
-      // },
-      {
-        text: "我的笔记",
-        link: "/log/log1",
-      },
-      {
-        text: "前端",
-        items: [
-          {
-            text: "工具库",
-            link: "/pages/Tool/twcIndex",
-          },
+    base: "/sssungl/",
+    /**
+     * 主题配置
+     */
+    themeConfig: {
+        // 导航栏配置
+        nav: [
+            { text: "首页", link: "/" },
+            // {
+            //   text: "英雄联盟",
+            //   link: "/pages/heros/",
+            // },
+            {
+                text: "我的笔记",
+                link: "/log/log1",
+            },
+            {
+                text: "前端",
+                items: [
+                    {
+                        text: "工具库",
+                        link: "/pages/Tool/twcIndex",
+                    },
+                ],
+            },
+            {
+                text: "服务端",
+                items: [
+                    {
+                        text: "NestJS",
+                        link: "/pages/nestjs/index1",
+                    },
+                    {
+                        text: "Python",
+                        link: "/pages/python/index",
+                    },
+                ],
+            },
         ],
-      },
-      {
-        text: "服务端",
-        items: [
-          {
-            text: "NestJS",
-            link: "/pages/nestjs/index1",
-          },
+        // 侧边栏配置
+        sidebar: {
+            "/log/": [
+                {
+                    text: "博客搭建",
+                    collapsed: true,
+                    items: [{ text: "V0", link: "/log/log1" }],
+                },
+            ],
+            "/pages/Tool/": [
+                // 工具库
+                {
+                    text: "TailwindCSS",
+                    collapsed: true,
+                    items: [
+                        { text: "介绍", link: "/pages/Tool/twcIndex" },
+                        { text: "卡片", link: "/pages/Tool/twcCard" },
+                        { text: "尝试", link: "/pages/Tool/tailwind" },
+                    ],
+                },
+                {
+                    text: "GSAP",
+                    collapsed: true,
+                    items: [
+                        { text: "快速入门", link: "/pages/Tool/gsapIndex" },
+                        { text: "使用", link: "/pages/Tool/gsapUse" },
+                    ],
+                },
+            ],
+            "/pages/nestjs/": [
+                // 服务器端
+                {
+                    text: "NestJS基础",
+                    collapsed: true,
+                    items: [{ text: "初学", link: "/pages/nestjs/index1" }],
+                },
+            ],
+            "/pages/python": [
+                {
+                    text: "Python基础",
+                    collapsed: true,
+                    items: [
+                        { text: "Python数据类型", link: "/pages/python/data" },
+                        { text: "Python内置方法", link: "/pages/python/index" },
+                    ],
+                },
+            ],
+        },
+        // 社交链接
+        socialLinks: [
+            { icon: "github", link: "https://github.com/2209407652" },
+            {
+                icon: {
+                    svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--fa6-brands" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1c-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79c0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603c5.7 5.737 8.6 12.997 8.6 21.797c0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5c-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8c-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8c6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2c-6.2 6.3-14 9.5-23.6 9.5c-9.6 0-17.5-3.2-23.6-9.5c-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2c6.3-6.3 13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2c-6.1 6.3-14 9.5-23.6 9.5c-9.6 0-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2c6.3-6.3 14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10z"></path></svg>',
+                },
+                link: "https://space.bilibili.com/474403666",
+            },
         ],
-      },
-    ],
-    // 侧边栏配置
-    sidebar: {
-      "/log/": [
-        {
-          text: "博客搭建",
-          collapsed: true,
-          items: [{ text: "V0", link: "/log/log1" }],
+        // 页脚
+        footer: {
+            message: "鲁ICP备2022013583号",
+            copyright: "Copyright © 2022-present By SSSUNGL",
         },
-      ],
-      "/pages/Tool/": [
-        // 工具库
-        {
-          text: "TailwindCSS",
-          collapsed: true,
-          items: [
-            { text: "介绍", link: "/pages/Tool/twcIndex" },
-            { text: "卡片", link: "/pages/Tool/twcCard" },
-            { text: "尝试", link: "/pages/Tool/tailwind" },
-          ],
-        },
-        {
-          text: "GSAP",
-          collapsed: true,
-          items: [
-            { text: "快速入门", link: "/pages/Tool/gsapIndex" },
-            { text: "使用", link: "/pages/Tool/gsapUse" },
-          ],
-        },
-      ],
-      "/pages/nestjs/": [
-        // 服务器端
-        {
-          text: "NestJS基础",
-          collapsed: true,
-          items: [{ text: "初学", link: "/pages/nestjs/index1" }],
-        },
-      ],
     },
-    // 社交链接
-    socialLinks: [
-      { icon: "github", link: "https://github.com/2209407652" },
-      {
-        icon: {
-          svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--fa6-brands" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1c-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79c0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603c5.7 5.737 8.6 12.997 8.6 21.797c0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5c-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8c-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8c6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2c-6.2 6.3-14 9.5-23.6 9.5c-9.6 0-17.5-3.2-23.6-9.5c-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2c6.3-6.3 13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2c-6.1 6.3-14 9.5-23.6 9.5c-9.6 0-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2c6.3-6.3 14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10z"></path></svg>',
-        },
-        link: "https://space.bilibili.com/474403666",
-      },
+    /**
+     * 应用配置
+     */
+    head: [
+        ["link", { rel: "icon", href: "./favicon.ico" }],
+        ["link", { rel: "stylesheet", href: "/vars.css" }],
+        ["script", { src: "https://cdn.tailwindcss.com" }],
     ],
-    // 页脚
-    footer: {
-      message: "鲁ICP备2022013583号",
-      copyright: "Copyright © 2022-present By SSSUNGL",
-    },
-  },
-  /**
-   * 应用配置
-   */
-  head: [
-    ["link", { rel: "icon", href: "./favicon.ico" }],
-    ["link", { rel: "stylesheet", href: "/vars.css" }],
-    ["script", { src: "https://cdn.tailwindcss.com" }],
-  ],
-  title: "SSSUNGL",
-  description: "基于vitepress搭建的个人博客",
-  appearance: true,
-  // lastUpdated: true, !!!!!!!
+    title: "SSSUNGL",
+    description: "基于vitepress搭建的个人博客",
+    appearance: true,
+    // lastUpdated: true, !!!!!!!
 });

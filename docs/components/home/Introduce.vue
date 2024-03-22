@@ -43,14 +43,12 @@ onMounted(() => {
         <p class="s4" style="margin: 8px">
             ✨没有什么目标，喜欢前端开发(技术菜鸟🥦)，喜欢跟朋友一块打游戏(更菜🥦)。
         </p>
-        <p class="s5" style="margin: 8px">
-            ⚙️后边还是学习前端技术为主，其余时间学习英语、剪辑、等(＠_＠;)(理想很丰满，显示很骨感)
+        <p class="s6" style="margin: 8px">
+            ip: 43.138.26.104, 开放端口: 3030, 8000, 3010, 4000, 服务器已经到期
         </p>
         <p class="s6" style="margin: 8px">
-            ip: 43.138.26.104, 开放端口: 3030, 8000, 3010, 4000
-        </p>
-        <p class="s6" style="margin: 8px">
-            uniapp云开发托管：static-mp-3eba5a2e-6b19-4748-bd72-f824b5818e70.next.bspapp.com
+            uniapp云开发托管：static-mp-3eba5a2e-6b19-4748-bd72-f824b5818e70.next.bspapp.com,
+            服务已经到期
         </p>
         <button class="b1" @click="goBack">返回首页</button>
     </div>
